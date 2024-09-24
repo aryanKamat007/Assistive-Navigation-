@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NAVI</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/styles.css')}}"
+    />
+    <!-- <link rel="stylesheet" href="/static/css/styles.css"> -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Urbanist:wght@100;200;300;400;500;600&display=swap");
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <nav>
+      <div class="logo">
+        <!-- <img src="" alt="" id="logo-icon"></img> -->
+        NAVI
+      </div>
+
+      <div class="nav-menu">
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <i class="fa fa-bars"></i>
+        </label>
+      </div>
+    </nav>
+    <div class="homepage-container">
+      <div class="homepage-title">Lane Detection and navigation.</div>
+      <div class="forms-container">
+        <form
+          action="{{url_for('upload')}}"
+          method="post"
+          enctype="multipart/form-data"
+          id="upload-form"
+        >
+          <label id="label">Upload the video footage.</label>
+          <input type="file" name="video" id="input-video" />
+          <label id="input-label">Select the video file</label>
+          <input type="submit" value="Upload" class="btn" />
+        </form>
+      </div>
+      <br />
+    </div>
+  </body>
+</html>
